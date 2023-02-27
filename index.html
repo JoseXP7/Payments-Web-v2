@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>¡Reporta tu Pago!</title>
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="row justify-content-md-around align-items-center mt-5">
+			<div class="col-md-4 bg-light">
+			<h1 class="text-dark">Reporta tu aporte</h1>
+			<form action="" method="post" enctype="multipart/form-data" class="was-validated" id="formulario" autocomplete="off">
+				<div class="form-group container mt-3">
+					<div class="row align-items-center">
+						<div class="col-md-9">
+							<div class="input-group">
+								<div class="input-group-text">
+									<select class="form-select" name="nacionalidad" id="nacionality">
+									<option value="venezuelan" name="venezolano">V</option>
+									<option value="foreign" name="extranjero">E</option>
+									</select>
+								</div>
+								<input id="identification" class="form-control" name="cedula" min="8" maxlength="8" type="number" required>
+								<div class="valid-feedback">Válido</div>
+								<div class="invalid-feedback">Cedula invalida</div>
+							</div>
+							
+						</div>
+					</div>	
+				</div>
+				<div class="form-group container mt-3">
+					<div class="input-group">
+						<span class="input-group-text">Email</span>
+						<input id="email" class="form-control" maxlength="28" name="correo" type="email" placeholder="100X.12345678.ucla@gmail.com" required>
+						<div class="valid-feedback">Válido</div>
+						<div class="invalid-feedback">Añade un correo válido</div>
+					</div>
+				</div>
+				<div class="form-group container mt-3">
+					<label for="pay-list">Tipo de Pago</label>
+					<select class="form-select" name="tipo-de-pago" id="pay-list">
+						<option value="transferencia">Transferencia</option>
+						<option value="pago-movil">Pago Movil</option>
+						<option value="divisas">Divisas</option>
+					</select>
+				</div>
+				<div class="form-group container mt-3">
+					<label for="recibo">Capture</label>
+					<input id="recibo" class="form-control" name="capture" type="file" accept="image/png,image/jpeg" required>
+				</div>
+				<div class="form-group container mt-5 mb-5">
+					<div class="row justify-content-center">
+						<div class="col-3">
+							<button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+						</div>
+						<div class="col-3">
+							<button type="reset" class="btn btn-danger">Limpiar</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-4 bg-light">
+			<h1>Datos para aportes</h1>
+			<p>Banco: Venezolano de Crédito</p>
+			<p>A nombre de: José Raúl Hozal Lozada</p>
+			<div class="input-group mt-3">
+				<input type="text" class="form-control" value="27563014" readonly>
+				<button class="btn btn-success">Copiar</button>
+			</div>
+			<div class="input-group mt-3">
+				<input type="text" class="form-control" value="04263687063" readonly>
+				<button class="btn btn-success">Copiar</button>
+			</div>
+			<div class="input-group mt-3 mb-3">
+				<input type="text" class="form-control" value="0104-0018-0601-8014-9708" readonly>
+				<button class="btn btn-success">Copiar</button>
+			</div>
+		</div>
+	</div>
+	<script src="bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
